@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './Main.css';
-
-// Importação de componentes para o Form
-// Importação de FaEdit e FaWindowClose para Tarefas
-import { FaPlus, FaEdit, FaWindowClose } from 'react-icons/fa';
+import Form from './Form';
+import Tarefas from './Tarefas';
 
 export default class Main extends Component {
   state = {
@@ -85,25 +83,17 @@ export default class Main extends Component {
       <div className="main">
         <h1>Lista de tarefas: </h1>
 
-        <form className="form" action="#" onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleChange} value={novaTarefa} />
-          <button type="submit">
-            <FaPlus />
-            {' '}
-            FINALIZAR COMPRA
-          </button>
-        </form>
-        <ul className="tarefas">
-          {tarefas.map((tarefa, index) => (
-            <li key={tarefa}>
-              {tarefa}
-              <span>
-                <FaEdit className="edit" onClick={(e) => this.handleEdit(e, index)} />
-                <FaWindowClose className="delete" onClick={(e) => this.handleDelete(e, index)} />
-              </span>
-            </li>
-          ))}
-        </ul>
+        <Form
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
+          novaTarefa={novaTarefa}
+        />
+
+        <Tarefas
+          handleEdit={this.handleEdit}
+          handleDelete={this.handleDelete}
+          tarefas={tarefas}
+        />
       </div>
     );
   }

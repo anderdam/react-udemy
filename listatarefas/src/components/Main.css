@@ -14,80 +14,9 @@
   text-align: center;
 }
 
-.form {
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.form input[type="text"] {
-  height: 40px;
-  padding: 0;
-  margin: 0;
-  width: 320px;
-  font-size: 20px;
-  border: 1px solid #ccc;
-  min-width: 80%;
-  max-width: 100%;
-  display: flex;
-  position: absolute;
-  bottom: 40px;
-}
 
-.form button[type="submit"] {
-  width: 100%;
-  border: none;
-  height: 40px;
-  background: #00bb16;
-  color: #fff;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-}
 
-.tarefas {
-  margin-top: 30px;
-}
-
-.tarefas li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 400ms;
-}
-
-.tarefas li:hover {
-  background: #51c5de;
-}
-
-.tarefas li .edit {
-  margin-right: 15px;
-  color: #51c5de;
-  cursor: pointer;
-  transition: all 400ms;
-}
-
-.tarefas li .delete {
-  margin-right: 15px;
-  color: #f04c64;
-  cursor: pointer;
-  transition: all 400ms;
-}
-
-.tarefas li:hover .edit,
-.tarefas li:hover .delete {
-  color: #000;
-}
-
-.tarefas li span {
-  display: flex;
-  align-items: center;
-}
 
 
 
